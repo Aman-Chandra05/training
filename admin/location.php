@@ -62,8 +62,9 @@ if(isset($_GET['type']) && isset($_GET['id']) && isset($_GET['operation']))
 			    <label for="dist">Distance</label>
 			    <input type="text" id="dist" name="dist" required placeholder="Enter distance" value="<?php echo $dist;?>">
 			    <input type="submit"  name="submit" value="Submit">
-			    <div class="unsuccessful"><?php echo $error; ?></div>
-			    <div class="successful"><?php echo $msg; ?></div>
+			</form>
+			<div class="unsuccessful"><?php echo $error; ?></div>
+			<div class="successful"><?php echo $msg; ?></div>
 		</div>
 		<?php
 		$arr=$loc->show($conn);
@@ -101,7 +102,7 @@ if(isset($_GET['type']) && isset($_GET['id']) && isset($_GET['operation']))
 							<td> <a class="edit zoom" href="location.php?operation=edit&id=<?php echo $key['id'];?>">Edit</a>
 							<a class="delete zoom" href="location.php?operation=delete&id=<?php echo $key['id'];?>">Delete</a>
 						</td>
-						<?php echo '</tr>';	
+						<?php echo '</tr>';
 					}
 					?>
 				</table>

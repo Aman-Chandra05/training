@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'classes/config.php';
-include 'classes/user.php';
+include '../classes/config.php';
+include '../classes/user.php';
 $conn=new dbase();
 $conn=$conn->connection();
 $user=new user();
@@ -40,7 +40,7 @@ if(isset($_POST['login']))
                 if($log['is_admin']==0)
 					header('location:customer.php');
 				else
-					header('location:admin/admin.php');
+					header('location:../admin/admin.php');
 			}
 			else
 				$loginsuccess="Admin will let you in soon.";
@@ -59,7 +59,7 @@ if(isset($_POST['login']))
 <body>
 	<section id="header">
 		<div>
-		  <img src="pics/logo.jpg">
+		  <img src="../pics/logo.jpg">
 		  <h1>Welcome to Cab Booking</h1>
 		</div>
 	</section>
